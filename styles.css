@@ -11,12 +11,28 @@
 
 
 /*Element styling*/
-
+    body {
+        background-color: rgb(255, 255, 255);
+    }
 
 
 /*Class styling*/
+    /*Navbar*/
+    .top-navbar {
+        height: 80px;
+        display: grid;
+        grid-template: repeat(3, 1fr) / 1fr 1fr;
+        padding: .1em;
+        border-bottom: 2px solid lightgrey;
+    }
+    .nav-name {
 
-
+        font-size: 1.3em;
+    }
+    .nav-email {
+        font-size: 0.9em;
+        text-decoration: underline;
+    }
 
 /*ID styling*/
 
