@@ -19,17 +19,21 @@
 /*Class styling*/
     /*Navbar*/
     .top-navbar {
-        height: 80px;
+        height: 60px;
         display: grid;
-        grid-template: repeat(3, 1fr) / 1fr 1fr;
+        grid-template: 1fr 1fr / repeat(5, 1fr);
         padding: .1em;
         border-bottom: 2px solid lightgrey;
     }
     .nav-name {
-
+        
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
         font-size: 1.3em;
     }
     .nav-email {
+        grid-column: 2 / 3;
+        grid-row: 2;
         font-size: 0.9em;
         text-decoration: underline;
     }
