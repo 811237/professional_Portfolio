@@ -16,14 +16,25 @@ $(document).ready(function() {
     // Action-lead event housing;
     $(window).scroll(function() {
         if ($(this).scrollTop() > 100) {
-            $('.nav-name').css({'grid-row': '1 / 3'});
-            $('.nav-email').css({'display': 'none'});
-            $('.top-navbar').css({'height': '60px'});
-        }else {
-            $('.nav-email').css({'display': 'block'});
-            $('.nav-name').css({'grid-row': '1 / 2'});
-            $('.top-navbar').css({'height': '120px'});
+            $('.nav-email').fadeOut(100);
+            $('.top-navbar').css({
+                'height': '60px',
+                'border-bottom': '2px solid lightgrey',});
+            }else {
+            $('.nav-email').fadeIn(100);
+            $('.top-navbar').css({
+                'height': '120px',
+                'border-bottom': 'none',});
         }
+    });
+
+    let contact_rotate = 0;
+    $('.contact').click(function() {
+        contact_rotate += 180;
+        let b = contact_rotate + 'deg';
+        $('.toggle').css({
+            'transform': `rotate(${b})`
+        })
     });
 
 });
